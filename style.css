@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #faf8ef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.game-container {
+    text-align: center;
+    position: relative;
+}
+
+h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.score {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.best-score {
+    font-size: 18px;
+    margin-left: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.grid-cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ccc0b3;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.grid-cell[data-value="2"] {
+    background-color: #FBC1B0;
+}
+
+.grid-cell[data-value="4"] {
+    background-color: #F7A6A0;
+}
+
+.grid-cell[data-value="8"] {
+    background-color: #F9B895;
+}
+
+.grid-cell[data-value="16"] {
+    background-color: #ffc898;
+}
+
+.grid-cell[data-value="32"] {
+    background-color: #E8828C;
+}
+
+.grid-cell[data-value="64"] {
+    background-color: #D35E71;
+}
+
+.grid-cell[data-value="128"] {
+    background-color: #B35575;
+}
+
+.grid-cell[data-value="256"] {
+    background-color: #FFAF7B;
+}
+
+.grid-cell[data-value="512"] {
+    background-color: #B3486C;
+}
+
+.grid-cell[data-value="1024"] {
+    background-color: #F14C67;
+}
+
+.grid-cell[data-value="2048"] {
+    background-color: #C33048;
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 10;
+    display: none;
+}
+
+.restart-btn-container {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: none;
+}
+
+.restart-btn-container button {
+    background-color: #ffbee4;
+    color: black;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    /* Закругленные углы */
+}
+
+.restart-btn-container button:hover {
+    background-color: #ffbee4;
+}
